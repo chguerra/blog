@@ -1,9 +1,5 @@
 require 'date'
 
-class String
-  include Term::ANSIColor
-end
-
 class Post
 	attr_accessor :title, :date, :text, :sponsor
 	def initialize(title, date, text, sponsor)
