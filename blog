@@ -1,0 +1,24 @@
+class Post
+	attr_reader :title, :date, :text
+	def initialize(title, date, text)
+		@title = title
+		@date = date
+		@text = text
+	end
+end
+
+class Blog
+	def initialize(container)
+		@container = container
+	end
+	def add_post(post)
+		@container << post
+	end
+end
+
+post1 = Post.new("Post title 1","27/10/15","Post 1 text")
+post2 = Post.new("Post title 2","26/10/15","Post 2 text")
+post3 = Post.new("Post title 3","23/10/15","Post 3 text")
+
+blog = Blog.new
+blog.add_post post1
